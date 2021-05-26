@@ -20,7 +20,7 @@ const mycontroller = require("./controller/mycontroller")
 
 // All is accepting any method (POST, GET, etc...)
 //   -- Notice /send have parameters in the function (run the send function)
-app.all("/send", mycontroller.send(io))
+app.all("/send_global", mycontroller.send(io))
 //   -- Get only Pass the function (not running it) as it is a First Class Citizen 
 app.get("/", mycontroller.index)
 

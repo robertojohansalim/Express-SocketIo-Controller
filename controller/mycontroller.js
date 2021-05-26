@@ -14,7 +14,7 @@ function send(io) {
   return async function (req, res) {
     // if Get method render send page
     if (req.method == "GET") {
-      res.render("send");
+      res.render("sendGlobal");
 
       // if POST method emit socket message
     } else if (req.method == "POST") {
@@ -26,7 +26,7 @@ function send(io) {
       console.log("Emmit success? ", success);
 
       // Redirect to sender page
-      res.redirect("/send");
+      res.redirect("/send_global");
     }
   };
 }
