@@ -1,0 +1,50 @@
+<div class="jumbotron">
+    <h1>
+    This is the Home Page
+    </h1>
+    <p>
+        Global Socket will be send bellow
+    </p>
+</div>
+
+<table class="table" id="table">
+    <thead>
+    <tr id="table_header">
+        <th>
+            Number
+        </th>
+        <th>
+            Message
+        </th>
+    </tr>
+    </thead>
+    <tbody id="table_body">
+
+    </tbody>
+</table>
+
+{{!-- Socket.io Implementation, this library is required where page need to be connected --}}
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js"></script>
+<script>
+    var socket = io();
+    console.log("Socket Listening")
+
+    // Listening to message send with "global_message"
+    //   -- TODO: Check how to make rooms or selective listener
+    socket.on("global_message", (msg)=>{ // msg is the argument send in mycontroller.send
+        // Random Loggin Ignore this, im bad at
+        //var table = document.getElementById("table");
+        //console.log(table.tBodies)
+        //console.log(table.tBodies[0].rows)
+        //console.log(table.tBodies[0].rows.length)
+
+        var totalRowLength = document.getElementById("table").tBodies[0].rows.length;
+        var row = document.getElementById("table_body").insertRow(-1)
+        // Insert First Cell
+        var cell = row.insertCell(-1)
+        cell.innerText = totalRowLength + 1 + ""
+        // Insert Second Cell
+        cell = row.insertCell(-1)
+        cell.innerText = msg
+    })
+</script>
