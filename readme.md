@@ -17,8 +17,8 @@ Reading Materials: (Have not read yet)
 - Global Chat Room (Multiple User, one chat room)
 
 - Subscriber System Socket (One end push, the other only listening for update)
-   -- Global 
-   -- Subscriber Group
+   - Global 
+   - Subscriber Group
 
 - Private Chat Room (Multiple Chat Room)
 
