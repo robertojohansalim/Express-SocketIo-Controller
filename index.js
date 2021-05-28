@@ -22,9 +22,13 @@ const mycontroller = require("./controller/mycontroller")
 //   -- Notice /send have parameters in the function (run the send function)
 app.all("/send_global", mycontroller.send(io))
 //   -- Get only Pass the function (not running it) as it is a First Class Citizen 
+app.all("/global_chat", mycontroller.globalChat(io))
+
 app.get("/", mycontroller.index)
 
 
+// Registering IO Handler of myController
+mycontroller.ioHandler(io)
 
 http.listen(3030, function(){
     console.log("Listening on port: 3030")
