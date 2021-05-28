@@ -1,5 +1,17 @@
 <small>TODO: FIX THIS README</small>
 
+# SocketIO with Express
+on MVC like structure <br>
+
+## Socket IO:
+https://socket.io/
+
+## How to Run:
+1. clone this repo
+2. cd over to the repo
+3. run `npm install`
+4. open `localhost:3030` in your fav brouser
+
 ## Notes and references:
 (Easier)
 Global / Param
